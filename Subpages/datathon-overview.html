@@ -85,6 +85,9 @@
 
         h2 {
             color: var(--bg-maroon);
+        }
+
+        h2 {
             margin-top: 3.5rem;
             font-size: 2rem;
         }
@@ -109,13 +112,15 @@
             box-shadow: 0 4px 12px rgba(128, 0, 0, 0.3);
         }
 
-        .video-container iframe {
+        .video-container iframe,
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: none;
+            object-fit: cover;
         }
 
         /* External link button */
@@ -226,8 +231,8 @@
           </ul>
         </li>
         <li><a href="olympiad.html" class="nav-link">Olympiad</a></li>
-        <li><a href="datathon.html" class="nav-link active">Datathon</a></li>
-        <li><a href="datathon-overview.html" class="nav-link">Datathon Overview</a></li>
+        <li><a href="datathon.html" class="nav-link">Datathon</a></li>
+        <li><a href="datathon-overview.html" class="nav-link active">Datathon Overview</a></li>
         <li class="dropdown">
           <div class="dropdown-header">
             <a href="ugs.html" class="nav-link dropdown-toggle">The Undergraduate Seminar</a>
@@ -254,7 +259,7 @@
     <!--HERO SECTION-->
     <section id="hero" style="padding-top: 0; padding-bottom: 0; min-height: auto; margin-top: 0;">
         <div class="hero-content" style="text-align: center; padding-top: 1rem;">
-            <h1 style="margin-top: 0;">Presenting The First Ever Datathon 2026!</h1>
+            <h1 style="margin-top: 0;">What Happened at The First Ever Datathon 2026?</h1>
             <p style="font-size: 1.3rem; margin-top: 0.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Specially Organised by the <span><strong>Mathematics Society at Constructor University (MSCU)</strong></span>
             </p>
@@ -263,54 +268,6 @@
                 <img src="images/datathon-banner.jpg" alt="Cryptography Seminar Presentation">
             </div>
         </div>
-
-        <div class="countdown-wrapper">
-            <div id="countdown">
-                <div class="countdown-box">
-                    <span id="days" class="countdown-number">00</span>
-                    <span class="countdown-unit">DAYS</span>
-                </div>
-                <div class="countdown-box">
-                    <span id="hours" class="countdown-number">00</span>
-                    <span class="countdown-unit">HOURS</span>
-                </div>
-                <div class="countdown-box">
-                    <span id="minutes" class="countdown-number">00</span>
-                    <span class="countdown-unit">MINUTES</span>
-                </div>
-                <div class="countdown-box">
-                    <span id="seconds" class="countdown-number">00</span>
-                    <span class="countdown-unit">SECONDS</span>
-                </div>
-            </div>
-        </div>
-        
-        <script>
-            function updateCountdown() {
-                const target = new Date('April 17, 2026 14:00:00').getTime();
-                const now = new Date().getTime();
-                const diff = target - now;
-        
-                if (diff <= 0) {
-                    document.getElementById('countdown').style.display = 'none';
-                    document.getElementById('countdown-message').style.display = 'block';
-                    return;
-                }
-        
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-        
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-            }
-        
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        </script>
     </section>
 
 
@@ -319,27 +276,13 @@
             <div class="content-block" style="padding-top: 0; margin-top: 0; padding-bottom: 2rem;">
                 <!-- OPENING HOOK -->
                 <p style="font-size: 1.2rem; line-height: 1.9; font-style: italic;">
-                    Given data, can you establish causation — not just correlation?
+                   Follow Us As We Go Through The Journey Of The First Ever Datathon 2026!
                 </p>
 
                 <p class="intro-emphasis">
                     The <strong>Constructor University Datathon 2026</strong> invites participants to tackle high-level challenges in causal reasoning and probabilistic modeling. Sponsored by <strong><a href="https://www.insytes.ai/">Insytes GmbH</a></strong>, this <strong>three-day</strong> event challenges teams to apply theory—from directed acyclic graphs to correlation analysis—to practical industry problems. Participants will benefit from the direct support of Insytes GmbH and academic guidance from our specialized faculty.
                 </p>
                 
-                <h1>📋 Table of Contents</h1>
-                <div style="background-color: rgba(128, 0, 0, 0.05); border: 4px solid #800000; border-radius: 8px; padding: 24px 32px; margin: 32px 0; padding-left: 50px; font-weight: 800;" id="table">
-                    <ol style="font-size: 1.1rem; line-height: 2.2; padding-left: 24px; margin: 0;">
-                        <li><a href="#overview" style="color: #800000; text-decoration: none;">Overview & About Insytes GmbH</a></li>
-                        <li><a href="#theme" style="color: #800000; text-decoration: none;">Theme & Topic</a></li>
-                        <li><a href="#day1" style="color: #800000; text-decoration: none;">Day 1 — Opening, Talks & Challenge Launch</a></li>
-                        <li><a href="#day2" style="color: #800000; text-decoration: none;">Day 2 — Team Work & Support</a></li>
-                        <li><a href="#day3" style="color: #800000; text-decoration: none;">Day 3 — Finalisation, Presentations & Awards</a></li>
-                        <li><a href="#judges" style="color: #800000; text-decoration: none;">Judges & Speakers</a></li>
-                        <li><a href="#prizes" style="color: #800000; text-decoration: none;">Prizes & Awards</a></li>
-                        <li><a href="#sponsors" style="color: #800000; text-decoration: none;">Sponsors & Partners</a></li>
-                        <li><a href="#register" style="color: #800000; text-decoration: none;">Register</a></li>
-                    </ol>
-                </div>
 
                 <h1 id="overview">Overview</h1>
 
@@ -383,25 +326,25 @@
                 </h2>
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;">
-                    This year's Datathon is centred on one of the most fundamental questions in data science:
-                    not just <em>what</em> is happening in the data, but <em>why</em>. The theme —
-                    <strong>Causation, Correlation & Causal Inference</strong> — challenges participants to move
+                    This year's Datathon centred on one of the most fundamental questions in data science:
+                    not just <em>what</em> was happening in the data, but <em>why</em>. The theme —
+                    <strong>Causation, Correlation & Causal Inference</strong> — challenged participants to move
                     beyond surface-level patterns and build a rigorous understanding of cause and effect.
                 </p>
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;">
-                    At the heart of the challenge is <strong>causal inference</strong> — a framework for reasoning
-                    about the effect of interventions and counterfactuals in complex systems. Participants will
-                    work with <strong>Directed Acyclic Graphs (DAGs)</strong> to map out causal relationships
-                    between variables, identify confounders, and determine what can and cannot be inferred from
+                    At the heart of the challenge was <strong>causal inference</strong> — a framework for reasoning
+                    about the effect of interventions and counterfactuals in complex systems. Participants
+                    worked with <strong>Directed Acyclic Graphs (DAGs)</strong> to map out causal relationships
+                    between variables, identify confounders, and determine what could and could not be inferred from
                     observational data alone.
                 </p>
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;">
-                    <strong>Probabilistic reasoning</strong> ties it all together — giving teams the tools to
-                    quantify uncertainty, model dependencies, and draw conclusions that are not just statistically
-                    sound, but causally meaningful. Whether you are building models, interpreting results, or
-                    designing interventions, thinking probabilistically is key to getting the right answer for
+                    <strong>Probabilistic reasoning</strong> tied it all together — giving teams the tools to
+                    quantify uncertainty, model dependencies, and draw conclusions that were not just statistically
+                    sound, but causally meaningful. Whether building models, interpreting results, or
+                    designing interventions, thinking probabilistically was key to getting the right answer for
                     the right reasons.
                 </p>
 
@@ -413,47 +356,26 @@
                     the keynote, academic talk, and panel discussion. Teams begin working in the afternoon.
                 </p>
                 <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;"><strong>Day 1 at a glance:</strong></p>
-                <table style="font-size: 1.15rem; line-height: 1.8; width: 100%; padding-left: 50px;">
-                    <tbody>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">14:00–14:30</td>
-                            <td style="padding: 8px 0;">Registration & participant check-in</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">14:30–14:45</td>
-                            <td style="padding: 8px 0;">Opening remarks & event introduction</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">14:45–15:15</td>
-                            <td style="padding: 8px 0;">Keynote talk — Automated Theorem Proving Using Causal ML</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">15:15–15:35</td>
-                            <td style="padding: 8px 0;">Academic talk — Introduction to Causal AI</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">15:35–16:05</td>
-                            <td style="padding: 8px 0;">Panel discussion — From Proof to Product</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">16:05–16:35</td>
-                            <td style="padding: 8px 0;">Coffee break & networking</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">16:35–16:55</td>
-                            <td style="padding: 8px 0;">Introduction of the challenge problem</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">16:55–17:15</td>
-                            <td style="padding: 8px 0;">Technical briefing for teams</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">17:15–19:00</td>
-                            <td style="padding: 8px 0;">Team Work Session 1 — problem exploration</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <br>
+                <p style="font-size: 1.15rem; line-height: 1.8;">
+                    Day 1 was the first day of the Datathon. It was a day of orientation, context-setting, and launching the challenge. The challenge
+                    introduction and technical briefing ran back to back so teams had a complete picture before
+                    the keynote, academic talk, and panel discussion. Teams began working in the afternoon. 
+                </p>
+                <br>
+                <p style="font-size: 1.15rem; line-height: 1.8;">
+                    The challenge introduction and technical briefing ran back to back so teams had a complete picture before
+                </p>
+
+
+                <h2>From Proof to Product</h2>
+                <div class="image-container">
+                    <img src="images/datathon-overview/from_proof_to_product.jpg" alt="Keynote" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                </div>
+
+                <div class="image-container">
+                    <img src="images/datathon-overview/ahmed_presentation.jpg" alt="Keynote" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                </div>
 
                 <br>
                 <h2 id="day2">Day 2 — April 18: Team Work & Support</h2>
@@ -468,28 +390,6 @@
                     Day 2 takes place in the IRC Seminar Room, with lunch self-arranged.
                 </p>
                 <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;"><strong>Day 2 at a glance:</strong></p>
-                <table style="font-size: 1.15rem; line-height: 1.8; width: 100%; padding-left: 50px;">
-                    <tbody>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">09:00–12:00</td>
-                            <td style="padding: 8px 0;">Team Work Session 2 — model development</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">11:00–13:00</td>
-                            <td style="padding: 8px 0;">Optional in-person Q&A and support session (IRC Seminar Room 3)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">12:00–13:00</td>
-                            <td style="padding: 8px 0;">Lunch break (self-arranged)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">13:00–17:00</td>
-                            <td style="padding: 8px 0;">Team Work Session 3 — final development, visualizations, and draft report/slides</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
 
                 <h2 id="day3">Day 3 — April 19: Finalisation, Presentations & Awards</h2>
                 <br>
@@ -498,48 +398,40 @@
                     slides in the morning, then submit all deliverables by noon. Presentations and evaluation follow
                     in the afternoon, ending with awards and closing networking.
                 </p>
+
+                <h2>Presentations</h2>
+                <div class="video-container">
+                    <video controls width="100%" height="100%">
+                        <source src="images/datathon-overview/presentation_1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="video-container">
+                    <video controls width="100%" height="100%">
+                        <source src="images/datathon-overview/presentation_2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="video-container">
+                    <video controls width="100%" height="100%">
+                        <source src="images/datathon-overview/Introduction.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;">
-                    Submission deliverables are: code repository, final report, and presentation slides.
+                    <br>
+                    <h1>Here are our proud winners!</h1>
+                    <div class="highlight-box">
+                        
+                       <div class="image-container">
+                        <img src="images/datathon-overview/winners.jpg" alt="Winners" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                       </div>
+                    </div>
                 </p>
-                <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;"><strong>Day 3 at a glance:</strong></p>
-                <table style="font-size: 1.15rem; line-height: 1.8; width: 100%; padding-left: 50px;">
-                    <tbody>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">09:00–12:00</td>
-                            <td style="padding: 8px 0;">Team Work Session 4 — finalization</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">12:00</td>
-                            <td style="padding: 8px 0;">Submission deadline</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">12:00–13:00</td>
-                            <td style="padding: 8px 0;">Lunch break (self-arranged)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">12:00–15:30</td>
-                            <td style="padding: 8px 0;">Judging setup (East Wing, on-site and remote evaluation)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">15:30–17:00</td>
-                            <td style="padding: 8px 0;">Team presentations (6 minutes + Q&amp;A per team)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">17:30–18:00</td>
-                            <td style="padding: 8px 0;">Judging & deliberation</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">18:00–18:20</td>
-                            <td style="padding: 8px 0;">Awards ceremony & closing remarks</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px 16px 8px 0; white-space: nowrap; font-weight: bold;">18:20–19:00</td>
-                            <td style="padding: 8px 0;">Closing dinner & networking</td>
-                        </tr>
-                    </tbody>
-                </table>
                 <br>
                 
                 <!-- Before your judges image row -->
@@ -562,30 +454,6 @@
                     </div>
                 
                 </div>
-
-                <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;">
-                    <br>
-                    <!-- On your Prizes h1 -->
-                    <h1 id="prizes">Prizes & Awards</h1>
-                    <br>
-                    <div class="highlight-box">
-                        <p style="font-size: 1.15rem; line-height: 1.8;">
-                            Winning teams will be recognised at the awards ceremony on the evening of April 19. Prizes include:
-                        </p>
-                        <ul style="font-size: 1.15rem; line-height: 1.8; padding-left: 50px; font-weight: 700;">
-                            <li>3D-printed trophies produced by the Makers Club</li>
-                            <li>Certificates of achievement</li>
-                            <li>Internship opportunities at Insytes GmbH</li>
-                            <li>Recommendation letters</li>
-                        </ul>
-                        <br>
-                        <p style="font-size: 1.15rem; line-height: 1.8;">
-                            Special recognitions may also be awarded — details to be confirmed closer to the event.
-                        </p>
-
-                    </div>
-                </p>
             
 
                 <br>
@@ -601,29 +469,6 @@
                     <br>
                     <br>
                 </p>
-                
-                <div id="register" style="text-align: center; padding: 48px 24px; border-radius: 16px; margin: 32px 0;">
-                    <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 12px;">Ready to take part?</p>
-                    <p style="font-size: 1.15rem; line-height: 1.8; color: #555; margin-bottom: 32px;">
-                        Sign up now to secure your spot at the Constructor University Datathon 2026.
-                        Places are limited, so don't wait too long!
-                    </p>
-                    <a href="https://forms.gle/2eXuzkici3ezDcQq5" 
-                       target="_blank"
-                       style="display: inline-block; padding: 14px 36px; background-color: #800000; color: white; 
-                              text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold;
-                              transition: background-color 0.3s ease;">
-                        Register Now →
-                    </a>
-
-                    <br>
-                    <a href="#table" 
-                    style="display: inline-block; padding: 14px 36px; background-color: #800000; color: white; 
-                           text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold;
-                           transition: background-color 0.3s ease; margin-top: 100px">
-                     Back to table of contents
-                 </a>
-                </div>
             </div>
         </div>
     </section>
