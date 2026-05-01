@@ -60,6 +60,182 @@
             font-size: 1rem;
         }
 
+        /* Unified image blocks + short titles under photos */
+        figure.media-block {
+            margin: 1.5rem auto;
+            max-width: 720px;
+        }
+
+        figure.media-block img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(128, 0, 0, 0.2);
+        }
+
+        .photo-caption {
+            display: block;
+            margin-top: 0.6rem;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-maroon);
+            text-align: center;
+            line-height: 1.35;
+        }
+
+        .media-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.15rem;
+            margin: 1.75rem 0;
+            align-items: stretch;
+        }
+
+        .media-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.75rem 0;
+            align-items: stretch;
+        }
+
+        @media (max-width: 900px) {
+            .media-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Presentations: two on top, one centered below — larger slide previews */
+        .presentations-bento {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 1.85rem;
+            max-width: 1120px;
+            margin: 2rem auto;
+            align-items: start;
+        }
+
+        .presentations-bento .media-card {
+            padding: 1.05rem 1.15rem 1.25rem;
+        }
+
+        .presentations-bento .media-card img {
+            min-height: clamp(300px, 42vw, 500px);
+            aspect-ratio: 16 / 10;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        .presentations-bento .media-card:nth-child(3) {
+            grid-column: 1 / -1;
+            max-width: min(90%, 820px);
+            width: 100%;
+            justify-self: center;
+        }
+
+        .presentations-bento .media-card:nth-child(3) img {
+            min-height: clamp(320px, 46vw, 560px);
+        }
+
+        @media (max-width: 640px) {
+            .presentations-bento {
+                grid-template-columns: 1fr;
+            }
+
+            .presentations-bento .media-card:nth-child(3) {
+                grid-column: 1;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .media-grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        figure.media-card {
+            margin: 0;
+        }
+
+        .media-card {
+            margin: 0;
+            padding: 0.85rem 0.9rem 1rem;
+            background: rgba(128, 0, 0, 0.07);
+            border-radius: 10px;
+            border-left: 4px solid var(--bg-maroon);
+            box-shadow: 0 4px 12px rgba(128, 0, 0, 0.1);
+        }
+
+        .media-card img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .media-card.media-card--square img {
+            aspect-ratio: 1 / 1;
+        }
+
+        .founders-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .founder-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 220px;
+        }
+
+        .founder-card img {
+            width: 190px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 0.35rem;
+            box-shadow: 0 4px 12px rgba(128, 0, 0, 0.18);
+        }
+
+        .judges-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.25rem;
+            width: 100%;
+        }
+
+        .judge-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.35rem;
+            flex: 1 1 160px;
+            text-align: center;
+        }
+
+        .judge-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(128, 0, 0, 0.15);
+        }
+
+        .winners-grid .winners-photo-figure {
+            margin: 0;
+        }
+
         .section-divider {
             text-align: center;
             margin: 3rem 0;
@@ -138,6 +314,82 @@
 
         .external-link:hover {
             opacity: 0.8;
+        }
+
+        /* Winners spotlight */
+        .winners-block {
+            margin: 2.75rem auto 2rem;
+            max-width: 1080px;
+            text-align: center;
+        }
+
+        .winners-title {
+            margin: 0 0 1.1rem;
+            font-size: clamp(1.65rem, 3.2vw, 2.15rem);
+            color: var(--bg-maroon);
+            line-height: 1.2;
+        }
+
+        .winners-card {
+            margin: 0 auto;
+            padding: 1.35rem 1.35rem 1.5rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(128, 0, 0, 0.06) 100%);
+            border: 1px solid rgba(128, 0, 0, 0.12);
+            border-left: 4px solid var(--bg-maroon);
+            border-radius: 12px;
+            box-shadow: 0 8px 22px rgba(80, 20, 20, 0.12);
+        }
+
+        .winners-photo-wrap {
+            margin: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(128, 0, 0, 0.22);
+        }
+
+        .winners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .winners-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .winners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .winners-caption {
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .winners-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.45rem 1.05rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background-color: var(--bg-maroon);
+            color: var(--text-beige);
+        }
+
+        .winners-badge i {
+            font-size: 0.95rem;
         }
 
         .countdown-wrapper {
@@ -265,7 +517,8 @@
             </p>
 
             <div class="image-container highlight-box">
-                <img src="images/datathon-banner.jpg" alt="Cryptography Seminar Presentation">
+                <img src="images/datathon-banner.jpg" alt="Datathon 2026 banner">
+                <p class="photo-caption">Datathon 2026 — event banner</p>
             </div>
         </div>
     </section>
@@ -292,8 +545,9 @@
                         <strong>About Insytes GmbH</strong>
                     </p>
     
-                    <div class="image-container" style="display: flex; flex-direction: row; gap: 16px; width: 100%; overflow: scroll; justify-content: center;">
-                        <img src="images/insytes_ai_logo.jpg" alt="Insytes Logo" style="width: 40%; height: 40%; object-fit: contain;">
+                    <div class="image-container">
+                        <img src="images/insytes_ai_logo.jpg" alt="Insytes GmbH logo" style="max-width: 280px; width: 55%; height: auto; object-fit: contain;">
+                        <p class="photo-caption">Insytes GmbH — industry partner</p>
                     </div>
     
                     <p style="font-size: 1.15rem; line-height: 1.8;">
@@ -308,15 +562,16 @@
                         community, helping foster connections between entrepreneurs, researchers, and industry.
                     </p>
 
-                    <div class="image-container" style="display: flex; flex-direction: row; justify-content: space-between;">
-                        <div style="display: flex; flex-direction: column; align-items: center;">
-                            <img src="images/karim.jpg" alt="Karim Abualrish" style="width: 190px; height: 200px; object-fit: cover; border-radius: 100%; margin-bottom: 15px;">
+                    <div class="founders-grid">
+                        <div class="founder-card">
+                            <img src="images/karim.jpg" alt="Karim Abualrish">
                             <strong>Karim Abualrish</strong>
+                            <span class="photo-caption">Co-founder, Insytes GmbH</span>
                         </div>
-                    
-                        <div style="display: flex; flex-direction: column; align-items: center;">
-                            <img src="images/varun.jpg" alt="Varun Patel" style="width: 190px; height: 200px; object-fit: cover; border-radius: 100%; margin-bottom: 15px;">
+                        <div class="founder-card">
+                            <img src="images/varun.jpg" alt="Varun Patel">
                             <strong>Varun Patel</strong>
+                            <span class="photo-caption">Co-founder, Insytes GmbH</span>
                         </div>
                     </div>
                 </div>
@@ -363,18 +618,25 @@
                     the keynote, academic talk, and panel discussion. Teams began working in the afternoon. 
                 </p>
                 <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;">
-                    The challenge introduction and technical briefing ran back to back so teams had a complete picture before
-                </p>
-
-
-                <h2>From Proof to Product</h2>
-                <div class="image-container">
-                    <img src="images/datathon-overview/from_proof_to_product.jpg" alt="Keynote" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                <div class="media-grid-2">
+                    <figure class="media-card media-card--square">
+                        <img src="images/datathon-overview/general_talk.jpg" alt="General talk during Datathon Day 1">
+                    </figure>
+                    <figure class="media-card media-card--square">
+                        <img src="images/datathon-overview/general_talk2.jpg" alt="General talk during Datathon Day 1, second view">
+                    </figure>
                 </div>
 
-                <div class="image-container">
-                    <img src="images/datathon-overview/ahmed_presentation.jpg" alt="Keynote" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                <h2>From Proof to Product</h2>
+                <div class="media-grid-2">
+                    <figure class="media-card media-card--square">
+                        <img src="images/datathon-overview/from_proof_to_product.jpg" alt="From Proof to Product keynote slide">
+                        <figcaption class="photo-caption">Keynote — From Proof to Product</figcaption>
+                    </figure>
+                    <figure class="media-card media-card--square">
+                        <img src="images/datathon-overview/ahmed_presentation.jpg" alt="Ahmed presenting at the Datathon">
+                        <figcaption class="photo-caption">Society lead — opening remarks</figcaption>
+                    </figure>
                 </div>
 
                 <br>
@@ -400,51 +662,65 @@
                 </p>
 
                 <h2>Presentations</h2>
-                <div class="image-container">
-                    <img src="images/datathon-overview/presentation_1.png" alt="Presentation 1">
+                <div class="presentations-bento">
+                    <figure class="media-card">
+                        <img src="images/datathon-overview/presentation_1.png" alt="Team presentation slide deck 1">
+                        <figcaption class="photo-caption">Presentation — team 1</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                        <img src="images/datathon-overview/presentation_2.png" alt="Team presentation slide deck 2">
+                        <figcaption class="photo-caption">Presentation — team 2</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                        <img src="images/datathon-overview/presentation_3.png" alt="Team presentation slide deck 3">
+                        <figcaption class="photo-caption">Presentation — team 3</figcaption>
+                    </figure>
                 </div>
 
-                <div class="image-container">
-                    <img src="images/datathon-overview/presentation_2.png" alt="Presentation 2">
-                </div>
-
-
-                <div class="image-container">
-                    <img src="images/datathon-overview/presentation_3.png" alt="Presentation 3">
-                </div>
-
-                <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;">
-                    <br>
-                    <h1>Here are our proud winners!</h1>
-                    <div class="highlight-box">
-                        
-                       <div class="image-container">
-                        <img src="images/datathon-overview/winners.jpg" alt="Winners" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
-                       </div>
-                    </div>
-                </p>
-                <br>
+                <section class="winners-block" id="winners" aria-labelledby="winners-title">
+                    <h2 id="winners-title" class="winners-title">Here are our proud winners!</h2>
+                    <figure class="winners-card">
+                        <div class="winners-grid">
+                            <figure class="winners-photo-figure">
+                                <div class="winners-photo-wrap">
+                                    <img class="winners-photo" src="images/datathon-overview/winners.jpg" alt="Datathon 2026 winners group photo">
+                                </div>
+                            </figure>
+                            <figure class="winners-photo-figure">
+                                <div class="winners-photo-wrap">
+                                    <img class="winners-photo" src="images/datathon-overview/winners_2.jpg" alt="Datathon 2026 winners celebration">
+                                </div>
+                            </figure>
+                            <figure class="winners-photo-figure">
+                                <div class="winners-photo-wrap">
+                                    <img class="winners-photo" src="images/datathon-overview/winners_3.jpg" alt="Datathon 2026 winners — third photo">
+                                </div>
+                            </figure>
+                        </div>
+                        <figcaption class="winners-caption">
+                            <span class="winners-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Winners</span>
+                        </figcaption>
+                    </figure>
+                </section>
                 
                 <!-- Before your judges image row -->
-                <h2 id="judges">Judges & Speakers</h2>
-                <div class="highlight-box" style="display: flex; flex-direction: row; justify-content: space-between; gap: 24px; width: 100%;">
-
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1;">
-                        <img src="images/keivan.jpg" alt="Keivan Mallahi Karai" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                <h2 id="judges">Judges &amp; Speakers</h2>
+                <div class="highlight-box judges-grid">
+                    <div class="judge-card">
+                        <img src="images/keivan.jpg" alt="Dr. Keivan Mallahi Karai">
                         <strong>Dr. Keivan Mallahi Karai</strong>
+                        <span class="photo-caption">Academic judge &amp; speaker</span>
                     </div>
-                
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1;">
-                        <img src="images/karim.jpg" alt="Karim Abualrish" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                    <div class="judge-card">
+                        <img src="images/karim.jpg" alt="Karim Abualrish">
                         <strong>Karim Abualrish</strong>
+                        <span class="photo-caption">Industry partner — Insytes</span>
                     </div>
-                
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1;">
-                        <img src="images/varun.jpg" alt="Varun Patel" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                    <div class="judge-card">
+                        <img src="images/varun.jpg" alt="Varun Patel">
                         <strong>Varun Patel</strong>
+                        <span class="photo-caption">Industry partner — Insytes</span>
                     </div>
-                
                 </div>
             
 
