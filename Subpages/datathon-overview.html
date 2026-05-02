@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datathon 2026 - Math Society</title>
+    <title>Causal AI Datathon 2026 — Overview | Math Society</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
@@ -106,46 +106,44 @@
             }
         }
 
-        /* Presentations: two on top, one centered below — larger slide previews */
+        /* Presentations: single row of three slide previews */
         .presentations-bento {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem 1.85rem;
-            max-width: 1120px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem 1.15rem;
+            max-width: 1200px;
             margin: 2rem auto;
-            align-items: start;
+            align-items: stretch;
         }
 
         .presentations-bento .media-card {
-            padding: 1.05rem 1.15rem 1.25rem;
+            padding: 0.85rem 0.75rem 1rem;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
         }
 
         .presentations-bento .media-card img {
-            min-height: clamp(300px, 42vw, 500px);
+            width: 100%;
+            min-height: clamp(180px, 22vw, 280px);
             aspect-ratio: 16 / 10;
             object-fit: contain;
             background: rgba(255, 255, 255, 0.92);
+            flex: 1;
         }
 
-        .presentations-bento .media-card:nth-child(3) {
-            grid-column: 1 / -1;
-            max-width: min(90%, 820px);
-            width: 100%;
-            justify-self: center;
+        .presentations-bento .media-card .photo-caption {
+            margin-top: 0.5rem;
         }
 
-        .presentations-bento .media-card:nth-child(3) img {
-            min-height: clamp(320px, 46vw, 560px);
-        }
-
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .presentations-bento {
                 grid-template-columns: 1fr;
+                gap: 1.25rem;
             }
 
-            .presentations-bento .media-card:nth-child(3) {
-                grid-column: 1;
-                max-width: 100%;
+            .presentations-bento .media-card img {
+                min-height: clamp(220px, 40vw, 360px);
             }
         }
 
@@ -340,31 +338,60 @@
             box-shadow: 0 8px 22px rgba(80, 20, 20, 0.12);
         }
 
-        .winners-photo-wrap {
+        .winners-card--video {
+            padding: 1.1rem 1.1rem 1.35rem;
+        }
+
+        .winners-video-wrap {
             margin: 0;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 14px rgba(128, 0, 0, 0.22);
+            background: #1a1a1a;
         }
 
-        .winners-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            align-items: stretch;
-        }
-
-        .winners-photo {
+        .winners-video {
             display: block;
             width: 100%;
             height: auto;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
         }
 
-        @media (max-width: 768px) {
-            .winners-grid {
+        .winners-videos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.15rem 1.25rem;
+            max-width: 1200px;
+            margin: 1.25rem auto 0;
+            text-align: left;
+        }
+
+        .winners-place-figure {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .winners-place-meta {
+            font-size: 1rem;
+            line-height: 1.55;
+            margin: 0 0 0.65rem;
+            color: var(--text-maroon);
+        }
+
+        .winners-place-meta strong {
+            color: var(--bg-maroon);
+        }
+
+        .winners-place-names {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 900px) {
+            .winners-videos-grid {
                 grid-template-columns: 1fr;
+                gap: 1.35rem;
             }
         }
 
@@ -511,9 +538,9 @@
     <!--HERO SECTION-->
     <section id="hero" style="padding-top: 0; padding-bottom: 0; min-height: auto; margin-top: 0;">
         <div class="hero-content" style="text-align: center; padding-top: 1rem;">
-            <h1 style="margin-top: 0;">What Happened at The First Ever Datathon 2026?</h1>
+            <h1 style="margin-top: 0;">Constructor University Causal AI Datathon 2026</h1>
             <p style="font-size: 1.3rem; margin-top: 0.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Specially Organised by the <span><strong>Mathematics Society at Constructor University (MSCU)</strong></span>
+                Organised by the <strong>Mathematics Society at Constructor University Bremen</strong> · April 17–19, 2026
             </p>
 
             <div class="image-container highlight-box">
@@ -527,41 +554,46 @@
     <section id="explanation" style="padding: 0; margin: 0; padding-bottom: 3rem;">
         <div class="container" style="padding-top: 0; margin-top: 0;">
             <div class="content-block" style="padding-top: 0; margin-top: 0; padding-bottom: 2rem;">
-                <!-- OPENING HOOK -->
                 <p style="font-size: 1.2rem; line-height: 1.9; font-style: italic;">
-                   Follow Us As We Go Through The Journey Of The First Ever Datathon 2026!
+                    A look back at the first Constructor University Causal AI Datathon — three days of causal reasoning, industry collaboration, and hands-on optimization on real manufacturing data.
                 </p>
 
                 <p class="intro-emphasis">
-                    The <strong>Constructor University Datathon 2026</strong> invites participants to tackle high-level challenges in causal reasoning and probabilistic modeling. Sponsored by <strong><a href="https://www.insytes.ai/">Insytes GmbH</a></strong>, this <strong>three-day</strong> event challenges teams to apply theory—from directed acyclic graphs to correlation analysis—to practical industry problems. Participants will benefit from the direct support of Insytes GmbH and academic guidance from our specialized faculty.
+                    The <strong>Constructor University Causal AI Datathon 2026</strong> brought together <strong>50 registered teams</strong> at <strong>Constructor University Bremen</strong> for inverse causal optimization on an industry dataset — not a prediction contest, but a challenge in identification and intervention design, with <strong><a href="https://www.insytes.ai/">Insytes GmbH</a></strong> as industry partner.
                 </p>
-                
 
                 <h1 id="overview">Overview</h1>
 
-                <div class="highlight-box">
+                <h2 id="event-overview">Event summary</h2>
+                <div class="key-takeaway">
+                    <ul style="margin: 0; padding-left: 1.25rem; line-height: 1.85; font-size: 1.05rem;">
+                        <li><strong>Name:</strong> Constructor University Causal AI Datathon 2026</li>
+                        <li><strong>Dates:</strong> April 17–19, 2026</li>
+                        <li><strong>Organizer:</strong> Mathematics Society at Constructor University Bremen</li>
+                        <li><strong>Industry partner:</strong> <a href="https://www.insytes.ai/">Insytes GmbH</a></li>
+                        <li><strong>Registered teams:</strong> 50</li>
+                        <li><strong>Venue:</strong> Constructor University Bremen</li>
+                    </ul>
+                </div>
 
-                    <p style="font-size: 1.15rem; line-height: 1.8;">
+                <div class="highlight-box">
+                    <p style="font-size: 1.15rem; line-height: 1.8; margin-top: 0;">
                         <strong>About Insytes GmbH</strong>
                     </p>
-    
                     <div class="image-container">
                         <img src="images/insytes_ai_logo.jpg" alt="Insytes GmbH logo" style="max-width: 280px; width: 55%; height: auto; object-fit: contain;">
                         <p class="photo-caption">Insytes GmbH — industry partner</p>
                     </div>
-    
                     <p style="font-size: 1.15rem; line-height: 1.8;">
                         Insytes GmbH is a Bremen-based startup founded by Constructor University alumni, working at the
                         intersection of artificial intelligence and industrial data. The company is backed by the EXIST
                         programme of the German Federal Ministry for Economic Affairs, supported through the University
                         of Bremen and BRIDGE.
                     </p>
-                    <br>
                     <p style="font-size: 1.15rem; line-height: 1.8;">
                         The team is led by co-founders <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong>. Karim is also an active member of the Bremen startup
                         community, helping foster connections between entrepreneurs, researchers, and industry.
                     </p>
-
                     <div class="founders-grid">
                         <div class="founder-card">
                             <img src="images/karim.jpg" alt="Karim Abualrish">
@@ -576,46 +608,48 @@
                     </div>
                 </div>
 
-                <h2 style="font-size: 1.15rem; line-height: 1.8;" id="theme">
-                    <strong>Theme & Topic</strong>
-                </h2>
-                <br>
+                <h2 id="theme">The problem</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8;">
-                    This year's Datathon centred on one of the most fundamental questions in data science:
-                    not just <em>what</em> was happening in the data, but <em>why</em>. The theme —
-                    <strong>Causation, Correlation & Causal Inference</strong> — challenged participants to move
-                    beyond surface-level patterns and build a rigorous understanding of cause and effect.
-                </p>
-                <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;">
-                    At the heart of the challenge was <strong>causal inference</strong> — a framework for reasoning
-                    about the effect of interventions and counterfactuals in complex systems. Participants
-                    worked with <strong>Directed Acyclic Graphs (DAGs)</strong> to map out causal relationships
-                    between variables, identify confounders, and determine what could and could not be inferred from
-                    observational data alone.
-                </p>
-                <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;">
-                    <strong>Probabilistic reasoning</strong> tied it all together — giving teams the tools to
-                    quantify uncertainty, model dependencies, and draw conclusions that were not just statistically
-                    sound, but causally meaningful. Whether building models, interpreting results, or
-                    designing interventions, thinking probabilistically was key to getting the right answer for
-                    the right reasons.
+                    Teams received a real-world <strong>injection molding</strong> manufacturing dataset and a <strong>causal DAG</strong>. The task was <strong>inverse causal optimization</strong>: given a target reduction in <strong>scrap rate</strong> (the KPI), identify which <strong>controllable process variables</strong> to intervene on — and by how much. This was not a data-science or prediction contest; it required causal identification and working backwards from a desired outcome to optimal interventions.
                 </p>
 
-                <h2 id="day1">Day 1 — April 17: Opening, Talks & Challenge Launch</h2>
+                <h2 id="program">Program highlights</h2>
+                <h3>Day 1 — April 17</h3>
+                <ul style="font-size: 1.15rem; line-height: 1.85; margin-top: 0.5rem;">
+                    <li>Opening remarks by <strong>Prof. Keivan Mallahi-Karai</strong></li>
+                    <li>Keynote by <strong>Omar Elshinawy</strong> (former Math Society president)</li>
+                    <li>Industry talk: <em>Introduction to Causal AI</em> by <strong>Varun Patel</strong> (Co-CEO, Insytes GmbH)</li>
+                    <li>Panel: <em>From Proof to Product: How Mathematical Reasoning Shapes Industry</em> — <strong>Omar Elshinawy</strong>, <strong>Karim Abualrish</strong> (Co-CEO, Insytes GmbH), <strong>Prof. Keivan Mallahi-Karai</strong></li>
+                </ul>
+                <p style="font-size: 1.15rem; line-height: 1.8;">
+                    <strong>Days 1–3:</strong> Open research and development period for all teams.
+                </p>
+                <h3>Day 3 — April 19</h3>
+                <ul style="font-size: 1.15rem; line-height: 1.85; margin-top: 0.5rem;">
+                    <li><strong>12:00</strong> — Paper submission deadline</li>
+                    <li><strong>15:30</strong> — Team presentations (6 minutes per team + Q&amp;A)</li>
+                    <li>Judging and deliberation</li>
+                    <li>Awards ceremony and closing dinner</li>
+                </ul>
+
+                <h2 id="judging-criteria">Judging</h2>
+                <div class="key-takeaway">
+                    <p style="font-size: 1.05rem; line-height: 1.75; margin: 0 0 0.75rem;">
+                        <strong>Judges:</strong> Prof. Keivan Mallahi-Karai (academic lead), <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (Insytes GmbH).
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.75; margin: 0;">
+                        <strong>Evaluation:</strong> 60% written paper / 40% presentation.
+                    </p>
+                </div>
+
+                <h2 id="day1">Day 1 — April 17: Opening, talks &amp; challenge launch</h2>
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;" class="highlight-box">
-                    Day 1 focuses on orientation, context-setting, and launching the challenge. The challenge
-                    introduction and technical briefing run back to back so teams have a complete picture before
-                    the keynote, academic talk, and panel discussion. Teams begin working in the afternoon.
+                    Opening by Prof. Keivan Mallahi-Karai, keynote by Omar Elshinawy, an industry talk on Causal AI by Varun Patel (Insytes), and the panel <em>From Proof to Product</em> — then teams entered the open R&amp;D period for the inverse optimization challenge.
                 </p>
                 <br>
-                <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;">
-                    Day 1 was the first day of the Datathon. It was a day of orientation, context-setting, and launching the challenge. The challenge
-                    introduction and technical briefing ran back to back so teams had a complete picture before
-                    the keynote, academic talk, and panel discussion. Teams began working in the afternoon. 
+                    Below: scenes from Day 1 — orientation, talks, and the start of team work on the manufacturing dataset and DAG.
                 </p>
                 <br>
                 <div class="media-grid-2">
@@ -640,25 +674,17 @@
                 </div>
 
                 <br>
-                <h2 id="day2">Day 2 — April 18: Team Work & Support</h2>
+                <h2 id="day2">Day 2 — April 18: Research &amp; development</h2>
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;" class="highlight-box">
-                    Day 2 is primarily a free working day for teams, focused on independent development of solutions.
-                    Teams formalize causal hypotheses using DAGs, build causal and probabilistic models, and iterate on
-                    testing and validation. Optional in-person support is available for teams who need help.
-                </p>
-                <br>
-                <p style="font-size: 1.15rem; line-height: 1.8;">
-                    Day 2 takes place in the IRC Seminar Room, with lunch self-arranged.
+                    Part of the three-day open R&amp;D window: teams continued inverse causal optimization — identifying interventions on controllable variables to hit the scrap-rate target — with support from peers and mentors as needed.
                 </p>
                 <br>
 
-                <h2 id="day3">Day 3 — April 19: Finalisation, Presentations & Awards</h2>
+                <h2 id="day3">Day 3 — April 19: Submissions, presentations &amp; awards</h2>
                 <br>
                 <p style="font-size: 1.15rem; line-height: 1.8;" class="highlight-box">
-                    Day 3 is for finalization, submission, judging, and closing. Teams finalize code, report, and
-                    slides in the morning, then submit all deliverables by noon. Presentations and evaluation follow
-                    in the afternoon, ending with awards and closing networking.
+                    <strong>12:00</strong> — paper deadline · <strong>15:30</strong> — team presentations (6 min + Q&amp;A) · judging · awards ceremony and closing dinner.
                 </p>
 
                 <h2>Presentations</h2>
@@ -678,48 +704,79 @@
                 </div>
 
                 <section class="winners-block" id="winners" aria-labelledby="winners-title">
-                    <h2 id="winners-title" class="winners-title">Here are our proud winners!</h2>
-                    <figure class="winners-card">
-                        <div class="winners-grid">
-                            <figure class="winners-photo-figure">
-                                <div class="winners-photo-wrap">
-                                    <img class="winners-photo" src="images/datathon-overview/winners.jpg" alt="Datathon 2026 winners group photo">
-                                </div>
-                            </figure>
-                            <figure class="winners-photo-figure">
-                                <div class="winners-photo-wrap">
-                                    <img class="winners-photo" src="images/datathon-overview/winners_2.jpg" alt="Datathon 2026 winners celebration">
-                                </div>
-                            </figure>
-                            <figure class="winners-photo-figure">
-                                <div class="winners-photo-wrap">
-                                    <img class="winners-photo" src="images/datathon-overview/winners_3.jpg" alt="Datathon 2026 winners — third photo">
-                                </div>
-                            </figure>
-                        </div>
-                        <figcaption class="winners-caption">
-                            <span class="winners-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Winners</span>
-                        </figcaption>
-                    </figure>
+                    <h2 id="winners-title" class="winners-title">Results</h2>
+                    <div class="key-takeaway" style="max-width: 720px; margin: 0 auto 1.5rem; text-align: left;">
+                        <p style="font-size: 1.1rem; line-height: 1.75; margin: 0 0 0.75rem;"><strong>1st place</strong> — <strong>Team PS</strong><br>Seyedpouria Seyedi</p>
+                        <p style="font-size: 1.1rem; line-height: 1.75; margin: 0 0 0.75rem;"><strong>2nd place</strong> — <strong>Team DonBathon</strong><br>Yaroslav Molybog, Ivan Balashov</p>
+                        <p style="font-size: 1.1rem; line-height: 1.75; margin: 0;"><strong>3rd place</strong> — <strong>Team OMEGA</strong><br>Amaan Shaikh, Vamshi Jinka</p>
+                    </div>
+                    <h3 id="winners-video-heading" class="winners-title" style="font-size: clamp(1.35rem, 2.8vw, 1.75rem); margin-bottom: 0.35rem;">Winner videos</h3>
+                    <p style="font-size: 1rem; color: var(--text-maroon); margin: 0 0 0.5rem; max-width: 720px; margin-left: auto; margin-right: auto; text-align: center;">
+                        First, second, and third place — ceremony clips for each team.
+                    </p>
+                    <div class="winners-videos-grid" role="group" aria-labelledby="winners-video-heading">
+                        <figure class="winners-card winners-card--video winners-place-figure">
+                            <p class="winners-place-meta">
+                                <strong>1st place</strong> — Team PS<br>
+                                <span class="winners-place-names">Seyedpouria Seyedi</span>
+                            </p>
+                            <div class="winners-video-wrap">
+                                <video class="winners-video" controls playsinline preload="metadata"
+                                    aria-label="First place — Team PS, Seyedpouria Seyedi">
+                                    <source src="images/datathon-overview/first_place.mp4" type="video/mp4">
+                                    Your browser does not support embedded video.
+                                </video>
+                            </div>
+                        </figure>
+                        <figure class="winners-card winners-card--video winners-place-figure">
+                            <p class="winners-place-meta">
+                                <strong>2nd place</strong> — Team DonBathon<br>
+                                <span class="winners-place-names">Yaroslav Molybog, Ivan Balashov</span>
+                            </p>
+                            <div class="winners-video-wrap">
+                                <video class="winners-video" controls playsinline preload="metadata"
+                                    aria-label="Second place — Team DonBathon">
+                                    <source src="images/datathon-overview/second_place_winners.mp4" type="video/mp4">
+                                    Your browser does not support embedded video.
+                                </video>
+                            </div>
+                        </figure>
+                        <figure class="winners-card winners-card--video winners-place-figure">
+                            <p class="winners-place-meta">
+                                <strong>3rd place</strong> — Team OMEGA<br>
+                                <span class="winners-place-names">Amaan Shaikh, Vamshi Jinka</span>
+                            </p>
+                            <div class="winners-video-wrap">
+                                <video class="winners-video" controls playsinline preload="metadata"
+                                    aria-label="Third place — Team OMEGA">
+                                    <source src="images/datathon-overview/third_place_winners.mp4" type="video/mp4">
+                                    Your browser does not support embedded video.
+                                </video>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="winners-caption" style="margin-top: 1.35rem;">
+                        <span class="winners-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Winners</span>
+                    </div>
                 </section>
                 
                 <!-- Before your judges image row -->
-                <h2 id="judges">Judges &amp; Speakers</h2>
+                <h2 id="judges">Judging panel</h2>
                 <div class="highlight-box judges-grid">
                     <div class="judge-card">
-                        <img src="images/keivan.jpg" alt="Dr. Keivan Mallahi Karai">
-                        <strong>Dr. Keivan Mallahi Karai</strong>
-                        <span class="photo-caption">Academic judge &amp; speaker</span>
+                        <img src="images/keivan.jpg" alt="Prof. Keivan Mallahi-Karai">
+                        <strong>Prof. Keivan Mallahi-Karai</strong>
+                        <span class="photo-caption">Academic lead &amp; judge</span>
                     </div>
                     <div class="judge-card">
                         <img src="images/karim.jpg" alt="Karim Abualrish">
                         <strong>Karim Abualrish</strong>
-                        <span class="photo-caption">Industry partner — Insytes</span>
+                        <span class="photo-caption">Judge — Co-CEO, Insytes GmbH</span>
                     </div>
                     <div class="judge-card">
                         <img src="images/varun.jpg" alt="Varun Patel">
                         <strong>Varun Patel</strong>
-                        <span class="photo-caption">Industry partner — Insytes</span>
+                        <span class="photo-caption">Judge — Co-CEO, Insytes GmbH</span>
                     </div>
                 </div>
             
