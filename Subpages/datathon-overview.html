@@ -204,6 +204,36 @@
             aspect-ratio: 1 / 1;
         }
 
+        /* Insytes & Omar spotlight: portrait keynote photos — avoid forced 4:3 crop */
+        .spotlight-gallery .media-card img {
+            aspect-ratio: auto;
+            height: auto;
+            object-fit: contain;
+            max-height: min(520px, 78vh);
+            background: rgba(128, 0, 0, 0.05);
+        }
+
+        .spotlight-gallery .spotlight-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem 1.15rem;
+            max-width: 1200px;
+            margin: 1.35rem auto 0;
+            align-items: stretch;
+        }
+
+        @media (max-width: 1000px) {
+            .spotlight-gallery .spotlight-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 560px) {
+            .spotlight-gallery .spotlight-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .founders-grid {
             display: flex;
             flex-direction: row;
@@ -569,7 +599,7 @@
     <!--HERO SECTION-->
     <section id="hero" style="padding-top: 0; padding-bottom: 0; min-height: auto; margin-top: 0;">
         <div class="hero-content" style="text-align: center; padding-top: 1rem;">
-            <h1 style="margin-top: 0;">Constructor University Causal AI Datathon 2026</h1>
+            <h1 style="margin-top: 0;">Constructor University Datathon 2026 Review</h1>
             <p style="font-size: 1.3rem; margin-top: 0.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Organised by the <strong>Mathematics Society at Constructor University Bremen</strong> · April 17–19, 2026
             </p>
@@ -684,15 +714,25 @@
                 <p style="font-size: 1.15rem; line-height: 1.8; margin-top: 0.5rem;">
                     Day 1 brought together <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (co-founders of Insytes GmbH) with <strong>Omar Elshinawy</strong> (former Math Society president) for the keynote and the <em>From Proof to Product</em> panel — connecting mathematical reasoning to industry.
                 </p>
-                <div class="media-grid-2" style="margin-top: 1.35rem;">
-                    <figure class="media-card media-card--square">
-                        <img src="images/datathon-overview/general_talk.jpg" alt="From Proof to Product panel discussion at Constructor University — wide view of the stage and screen" loading="lazy">
-                        <figcaption class="photo-caption">Panel — hall view</figcaption>
-                    </figure>
-                    <figure class="media-card media-card--square">
-                        <img src="images/datathon-overview/general_talk2.jpg" alt="From Proof to Product panel — speakers and audience in the lecture hall" loading="lazy">
-                        <figcaption class="photo-caption">Panel — from the audience</figcaption>
-                    </figure>
+                <div class="spotlight-gallery" aria-label="Insytes partners and Omar Elshinawy — keynote and panel photos">
+                    <div class="spotlight-row">
+                        <figure class="media-card">
+                            <img src="images/datathon-overview/omar.jpeg" alt="Omar Elshinawy delivering keynote — acknowledgements slide on screen" loading="lazy">
+                            <figcaption class="photo-caption">Omar — keynote (acknowledgements)</figcaption>
+                        </figure>
+                        <figure class="media-card">
+                            <img src="images/datathon-overview/omar2.jpeg" alt="Omar Elshinawy presenting — bibliography slide" loading="lazy">
+                            <figcaption class="photo-caption">Omar — keynote (bibliography)</figcaption>
+                        </figure>
+                        <figure class="media-card">
+                            <img src="images/datathon-overview/omar3.jpeg" alt="Omar Elshinawy presenting — abstract slide on formal mathematics" loading="lazy">
+                            <figcaption class="photo-caption">Omar — keynote (abstract)</figcaption>
+                        </figure>
+                        <figure class="media-card">
+                            <img src="images/datathon-overview/general_talk2.jpg" alt="From Proof to Product panel — speakers and audience in the lecture hall" loading="lazy">
+                            <figcaption class="photo-caption">Panel</figcaption>
+                        </figure>
+                    </div>
                 </div>
 
                 <br>
