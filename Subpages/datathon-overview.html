@@ -338,25 +338,25 @@
             box-shadow: 0 8px 22px rgba(80, 20, 20, 0.12);
         }
 
-        .winners-card--video {
+        .winners-card--place {
             padding: 1.1rem 1.1rem 1.35rem;
         }
 
-        .winners-video-wrap {
+        .winners-photo-wrap {
             margin: 0;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 14px rgba(128, 0, 0, 0.22);
-            background: #1a1a1a;
+            background: rgba(128, 0, 0, 0.04);
         }
 
-        .winners-video {
+        .winners-photo {
             display: block;
             width: 100%;
             height: auto;
         }
 
-        .winners-videos-grid {
+        .winners-photos-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.15rem 1.25rem;
@@ -389,7 +389,7 @@
         }
 
         @media (max-width: 900px) {
-            .winners-videos-grid {
+            .winners-photos-grid {
                 grid-template-columns: 1fr;
                 gap: 1.35rem;
             }
@@ -710,48 +710,39 @@
                         <p style="font-size: 1.1rem; line-height: 1.75; margin: 0 0 0.75rem;"><strong>2nd place</strong> — <strong>Team DonBathon</strong><br>Yaroslav Molybog, Ivan Balashov</p>
                         <p style="font-size: 1.1rem; line-height: 1.75; margin: 0;"><strong>3rd place</strong> — <strong>Team OMEGA</strong><br>Amaan Shaikh, Vamshi Jinka</p>
                     </div>
-                    <h3 id="winners-video-heading" class="winners-title" style="font-size: clamp(1.35rem, 2.8vw, 1.75rem); margin-bottom: 0.35rem;">Winner videos</h3>
+                    <h3 id="winners-media-heading" class="winners-title" style="font-size: clamp(1.35rem, 2.8vw, 1.75rem); margin-bottom: 0.35rem;">Winner photos</h3>
                     <p style="font-size: 1rem; color: var(--text-maroon); margin: 0 0 0.5rem; max-width: 720px; margin-left: auto; margin-right: auto; text-align: center;">
-                        First, second, and third place — ceremony clips for each team.
+                        First, second, and third place — podium moments for each team.
                     </p>
-                    <div class="winners-videos-grid" role="group" aria-labelledby="winners-video-heading">
-                        <figure class="winners-card winners-card--video winners-place-figure">
+                    <div class="winners-photos-grid" role="group" aria-labelledby="winners-media-heading">
+                        <figure class="winners-card winners-card--place winners-place-figure">
                             <p class="winners-place-meta">
                                 <strong>1st place</strong> — Team PS<br>
                                 <span class="winners-place-names">Seyedpouria Seyedi</span>
                             </p>
-                            <div class="winners-video-wrap">
-                                <video class="winners-video" controls playsinline preload="metadata"
-                                    aria-label="First place — Team PS, Seyedpouria Seyedi">
-                                    <source src="images/datathon-overview/first_place.mp4" type="video/mp4">
-                                    Your browser does not support embedded video.
-                                </video>
+                            <div class="winners-photo-wrap">
+                                <img class="winners-photo" src="images/datathon-overview/first_place.png"
+                                    alt="First place — Team PS, Seyedpouria Seyedi at the awards ceremony" loading="lazy">
                             </div>
                         </figure>
-                        <figure class="winners-card winners-card--video winners-place-figure">
+                        <figure class="winners-card winners-card--place winners-place-figure">
                             <p class="winners-place-meta">
                                 <strong>2nd place</strong> — Team DonBathon<br>
                                 <span class="winners-place-names">Yaroslav Molybog, Ivan Balashov</span>
                             </p>
-                            <div class="winners-video-wrap">
-                                <video class="winners-video" controls playsinline preload="metadata"
-                                    aria-label="Second place — Team DonBathon">
-                                    <source src="images/datathon-overview/second_place_winners.mp4" type="video/mp4">
-                                    Your browser does not support embedded video.
-                                </video>
+                            <div class="winners-photo-wrap">
+                                <img class="winners-photo" src="images/datathon-overview/second_place_winners.png"
+                                    alt="Second place — Team DonBathon at the awards ceremony" loading="lazy">
                             </div>
                         </figure>
-                        <figure class="winners-card winners-card--video winners-place-figure">
+                        <figure class="winners-card winners-card--place winners-place-figure">
                             <p class="winners-place-meta">
                                 <strong>3rd place</strong> — Team OMEGA<br>
                                 <span class="winners-place-names">Amaan Shaikh, Vamshi Jinka</span>
                             </p>
-                            <div class="winners-video-wrap">
-                                <video class="winners-video" controls playsinline preload="metadata"
-                                    aria-label="Third place — Team OMEGA">
-                                    <source src="images/datathon-overview/third_place_winners.mp4" type="video/mp4">
-                                    Your browser does not support embedded video.
-                                </video>
+                            <div class="winners-photo-wrap">
+                                <img class="winners-photo" src="images/datathon-overview/third_place_winners.png"
+                                    alt="Third place — Team OMEGA at the awards ceremony" loading="lazy">
                             </div>
                         </figure>
                     </div>
@@ -760,13 +751,18 @@
                     </div>
                 </section>
                 
-                <!-- Before your judges image row -->
-                <h2 id="judges">Judging panel</h2>
+                <!-- Judges & speakers -->
+                <h2 id="judges">Judges &amp; speakers</h2>
                 <div class="highlight-box judges-grid">
                     <div class="judge-card">
                         <img src="images/keivan.jpg" alt="Prof. Keivan Mallahi-Karai">
                         <strong>Prof. Keivan Mallahi-Karai</strong>
                         <span class="photo-caption">Academic lead &amp; judge</span>
+                    </div>
+                    <div class="judge-card">
+                        <img src="images/datathon-overview/omar.jpg" alt="Omar Elshinawy">
+                        <strong>Omar Elshinawy</strong>
+                        <span class="photo-caption">Keynote speaker · former Math Society president</span>
                     </div>
                     <div class="judge-card">
                         <img src="images/karim.jpg" alt="Karim Abualrish">
