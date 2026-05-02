@@ -132,14 +132,20 @@
             }
         }
 
-        /* Presentations: single row of three slide previews */
+        /* Presentations: row of slide previews (4 on desktop) */
         .presentations-bento {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 1rem 1.15rem;
             max-width: 1200px;
             margin: 2rem auto;
             align-items: stretch;
+        }
+
+        @media (max-width: 1024px) {
+            .presentations-bento {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .presentations-bento .media-card {
@@ -729,8 +735,8 @@
                             <figcaption class="photo-caption">Omar — keynote (abstract)</figcaption>
                         </figure>
                         <figure class="media-card">
-                            <img src="images/datathon-overview/general_talk2.jpg" alt="From Proof to Product panel — speakers and audience in the lecture hall" loading="lazy">
-                            <figcaption class="photo-caption">Panel</figcaption>
+                            <img src="images/datathon-overview/general_talk3.jpg" alt="From Proof to Product panel discussion — Omar Elshinawy, Karim Abualrish, and Prof. Keivan Mallahi-Karai on stage" loading="lazy">
+                            <figcaption class="photo-caption">Panel — From Proof to Product</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -749,7 +755,7 @@
                     <strong>12:00</strong> — paper deadline · <strong>15:30</strong> — team presentations (6 min + Q&amp;A) · judging · awards ceremony and closing dinner.
                 </p>
 
-                <h2>Presentations</h2>
+                <h2 id="presentation-highlights">Presentation highlights</h2>
                 <div class="presentations-bento">
                     <figure class="media-card">
                         <img src="images/datathon-overview/presentation_1.png" alt="Team presentation slide deck 1">
@@ -762,6 +768,10 @@
                     <figure class="media-card">
                         <img src="images/datathon-overview/presentation_3.png" alt="Team presentation slide deck 3">
                         <figcaption class="photo-caption">Presentation — team 3</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                        <img src="images/datathon-overview/presentation_4.jpeg" alt="Team presentation — A causal approach to scrap reduction (Sanam Tabalen, Denis Rosu, Tajwar Ali, Zerachael Mekasha)" loading="lazy">
+                        <figcaption class="photo-caption">Presentation — team 4</figcaption>
                     </figure>
                 </div>
 
