@@ -221,14 +221,14 @@
 
         .spotlight-gallery .spotlight-row {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem 1.15rem;
-            max-width: 1200px;
+            max-width: min(1100px, 100%);
             margin: 1.35rem auto 0;
             align-items: stretch;
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 900px) {
             .spotlight-gallery .spotlight-row {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -238,6 +238,14 @@
             .spotlight-gallery .spotlight-row {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* Single photo in Day 1 spotlight — avoid a narrow column in a multi-column grid */
+        .spotlight-gallery .spotlight-row:has(> figure:only-child) {
+            grid-template-columns: 1fr;
+            max-width: min(640px, 100%);
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .founders-grid {
@@ -703,7 +711,7 @@
                 <h2 id="judging-criteria">Judging</h2>
                 <div class="key-takeaway">
                     <p style="font-size: 1.05rem; line-height: 1.75; margin: 0 0 0.75rem;">
-                        <strong>Judges:</strong> Prof. Keivan Mallahi-Karai (academic lead), <strong>Omar Elshinawy</strong> (keynote &amp; former Math Society president), <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (Insytes GmbH).
+                        <strong>Judges:</strong> Prof. Keivan Mallahi-Karai (academic lead), <strong>Ahmed Maghri</strong> (Math Society president · panel moderator), <strong>Omar Elshinawy</strong> (keynote &amp; former Math Society president), <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (Insytes GmbH).
                     </p>
                     <p style="font-size: 1.05rem; line-height: 1.75; margin: 0;">
                         <strong>Evaluation:</strong> 60% written paper / 40% presentation.
@@ -718,25 +726,21 @@
                 <br>
                 <h3 id="day1-spotlight">Insytes co-founders &amp; Omar Elshinawy</h3>
                 <p style="font-size: 1.15rem; line-height: 1.8; margin-top: 0.5rem;">
-                    Day 1 brought together <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (co-founders of Insytes GmbH) with <strong>Omar Elshinawy</strong> (former Math Society president) for the keynote and the <em>From Proof to Product</em> panel — connecting mathematical reasoning to industry.
+                    Day 1 brought together <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (co-founders of Insytes GmbH) with <strong>Omar Elshinawy</strong> (former Math Society president) for the keynote and the <em>From Proof to Product</em> panel — connecting mathematical reasoning to industry — with <strong>Ahmed Maghri</strong> (Math Society president) helping anchor the opening day.
                 </p>
-                <div class="spotlight-gallery" aria-label="Insytes partners and Omar Elshinawy — keynote and panel photos">
+                <div class="spotlight-gallery" aria-label="Day 1 — Omar Elshinawy, Karim Abualrish (Insytes), and Ahmed Maghri (Math Society president)">
                     <div class="spotlight-row">
                         <figure class="media-card">
-                            <img src="images/datathon-overview/omar.jpeg" alt="Omar Elshinawy delivering keynote — acknowledgements slide on screen" loading="lazy">
-                            <figcaption class="photo-caption">Omar — keynote (acknowledgements)</figcaption>
+                            <img src="images/datathon-overview/omar.png" alt="Omar Elshinawy delivering keynote — acknowledgements slide on screen" loading="lazy">
+                            <figcaption class="photo-caption">Omar Elshinawy — keynote</figcaption>
                         </figure>
                         <figure class="media-card">
-                            <img src="images/datathon-overview/omar2.jpeg" alt="Omar Elshinawy presenting — bibliography slide" loading="lazy">
-                            <figcaption class="photo-caption">Omar — keynote (bibliography)</figcaption>
+                            <img src="images/datathon-overview/karim.png" alt="Karim Abualrish (Insytes co-founder) speaking on stage at the datathon" loading="lazy">
+                            <figcaption class="photo-caption">Karim Abualrish — Insytes co-founder</figcaption>
                         </figure>
                         <figure class="media-card">
-                            <img src="images/datathon-overview/omar3.jpeg" alt="Omar Elshinawy presenting — abstract slide on formal mathematics" loading="lazy">
-                            <figcaption class="photo-caption">Omar — keynote (abstract)</figcaption>
-                        </figure>
-                        <figure class="media-card">
-                            <img src="images/datathon-overview/general_talk3.jpg" alt="From Proof to Product panel discussion — Omar Elshinawy, Karim Abualrish, and Prof. Keivan Mallahi-Karai on stage" loading="lazy">
-                            <figcaption class="photo-caption">Panel — From Proof to Product</figcaption>
+                            <img src="images/datathon-overview/ahmed_presentation.jpg" alt="Ahmed Maghri (Math Society president) at the datathon" loading="lazy">
+                            <figcaption class="photo-caption">Ahmed Maghri — Math Society president</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -830,6 +834,11 @@
                         <img src="images/keivan.jpg" alt="Prof. Keivan Mallahi-Karai">
                         <strong>Prof. Keivan Mallahi-Karai</strong>
                         <span class="photo-caption">Academic lead &amp; judge</span>
+                    </div>
+                    <div class="judge-card">
+                        <img src="images/datathon-overview/ahmed.jpg" alt="Ahmed Maghri">
+                        <strong>Ahmed Maghri</strong>
+                        <span class="photo-caption">President, Math Society · panel moderator</span>
                     </div>
                     <div class="judge-card">
                         <img src="images/datathon-overview/omar.jpg" alt="Omar Elshinawy">
