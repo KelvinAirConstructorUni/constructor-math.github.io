@@ -248,6 +248,37 @@
             margin-right: auto;
         }
 
+        /* Day 1 wide panel scene — preserve landscape framing */
+        .day1-panel-photo {
+            max-width: min(1100px, 100%);
+            margin: 0 auto;
+        }
+
+        .day1-panel-photo .media-card {
+            margin: 0;
+        }
+
+        .day1-panel-photo .media-card img {
+            aspect-ratio: auto;
+            height: auto;
+            max-height: min(560px, 85vh);
+            object-fit: contain;
+            background: rgba(128, 0, 0, 0.05);
+        }
+
+        .day1-panel-photo__caption strong {
+            display: block;
+            font-weight: 700;
+        }
+
+        .day1-panel-photo__caption .photo-caption-sub {
+            display: block;
+            margin-top: 0.4rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
         .founders-grid {
             display: flex;
             flex-direction: row;
@@ -743,6 +774,16 @@
                             <figcaption class="photo-caption">Ahmed Maghri — Math Society president</figcaption>
                         </figure>
                     </div>
+                </div>
+
+                <div class="day1-panel-photo" id="day1-from-proof-panel" aria-label="Panel — From Proof to Product: Ahmed Maghri, Karim Abualrish, Omar Elshinawy, and Prof. Keivan Mallahi-Karai">
+                    <figure class="media-card">
+                        <img src="images/datathon-overview/general_talk4.jpg" alt="From Proof to Product panel — Ahmed Maghri, Karim Abualrish, Omar Elshinawy, and Prof. Keivan Mallahi-Karai in discussion" loading="lazy">
+                        <figcaption class="photo-caption day1-panel-photo__caption">
+                            <strong>Panel — From Proof to Product</strong>
+                            <span class="photo-caption-sub">Ahmed Maghri, Karim Abualrish, Omar Elshinawy, and Prof. Keivan Mallahi-Karai</span>
+                        </figcaption>
+                    </figure>
                 </div>
 
                 <br>
