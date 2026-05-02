@@ -20,6 +20,32 @@
             display: block !important;
         }
 
+        /* Wider hero so the banner matches site content width (landing.css caps .hero-content at 820px) */
+        #hero .hero-content {
+            max-width: min(1200px, calc(100% - 2rem)) !important;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: clamp(1rem, 4vw, 2rem) !important;
+            padding-right: clamp(1rem, 4vw, 2rem) !important;
+        }
+
+        /* Slightly smaller than full hero width; center (override .highlight-box margin: 2rem 0 !important from landing.css) */
+        #hero .image-container.highlight-box {
+            max-width: min(880px, 90%) !important;
+            width: 100%;
+            margin: 2rem auto !important;
+            display: block;
+        }
+
+        /* landing.css caps .image-container img at 480px + object-fit:cover — that crops tall banners */
+        #hero .image-container img {
+            width: 100%;
+            max-width: 100%;
+            max-height: none !important;
+            height: auto !important;
+            object-fit: contain !important;
+        }
+
         
         .hero-content {
             padding-top: 0 !important;
@@ -550,7 +576,6 @@
 
             <div class="image-container highlight-box">
                 <img src="images/datathon-banner.jpg" alt="Datathon 2026 banner">
-                <p class="photo-caption">Datathon 2026 — event banner</p>
             </div>
         </div>
     </section>
@@ -599,7 +624,7 @@
                         The team is led by co-founders <strong>Karim Abualrish and Varun Patel</strong>. <strong>Karim Abualrish</strong> is also an active member of the Bremen startup
                         community, helping foster connections between entrepreneurs, researchers, and industry, and <strong>Varun Patel</strong> co-leads Insytes as co-CEO.
                     </p>
-                    
+
 
                     <div class="founders-grid">
                         <div class="founder-card">
@@ -642,7 +667,7 @@
                 <h2 id="judging-criteria">Judging</h2>
                 <div class="key-takeaway">
                     <p style="font-size: 1.05rem; line-height: 1.75; margin: 0 0 0.75rem;">
-                        <strong>Judges:</strong> Prof. Keivan Mallahi-Karai (academic lead), <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (Insytes GmbH).
+                        <strong>Judges:</strong> Prof. Keivan Mallahi-Karai (academic lead), <strong>Omar Elshinawy</strong> (keynote &amp; former Math Society president), <strong>Karim Abualrish</strong> and <strong>Varun Patel</strong> (Insytes GmbH).
                     </p>
                     <p style="font-size: 1.05rem; line-height: 1.75; margin: 0;">
                         <strong>Evaluation:</strong> 60% written paper / 40% presentation.
@@ -759,7 +784,7 @@
                     <div class="judge-card">
                         <img src="images/datathon-overview/omar.jpg" alt="Omar Elshinawy">
                         <strong>Omar Elshinawy</strong>
-                        <span class="photo-caption">Keynote speaker · former Math Society president</span>
+                        <span class="photo-caption">Judge · keynote speaker · former Math Society president</span>
                     </div>
                     <div class="judge-card">
                         <img src="images/karim.jpg" alt="Karim Abualrish">
